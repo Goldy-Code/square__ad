@@ -30,7 +30,7 @@ function randomColor(square) {
     square.style.backgroundColor = `${a}`
 }
 
-const myInterval = setInterval(createSquare, 1000)
+// const myInterval = setInterval(createSquare, 1000)
 setTimeout(() => {
     clearInterval(myInterval)
     setTimeout(() => pushAd(), 2000)
@@ -54,19 +54,24 @@ function pushAd() {
 
     timer.innerText = '5'
 
-    let timeValue = 4
+    let timeValue = 5
     function time() {
         timer.innerText = timeValue
         timeValue--
     }
 
+    ad.style.animationName = 'hello';
+
     const stopAd = setInterval(time, 1000)
     setTimeout(() => {
         clearInterval(stopAd)
-        ad.style.display = 'none'
-    }, 5000)
+        ad.style.animationName = 'goodbye';
+        ad.style.opacity = '0'
+        ad.style.pointerEvents = "none";
+    }, 6000)
 }
 
+pushAd()
 
 
 

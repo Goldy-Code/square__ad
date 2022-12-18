@@ -19,6 +19,32 @@
   height: 300px;
   background-color: gold;
   z-index: 10;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+}
+
+@keyframes hello {
+  0% {
+    top: 0.5%;
+    opacity: 0;
+  }
+  100% {
+    top: 5%;
+    opacity: 1;
+  }
+
+}
+
+@keyframes goodbye {
+  0% {
+    top: 5%;
+    opacity: 1;
+  }
+
+  100% {
+    top: 0.5%;
+    opacity: 0;
+  }
 }
 
 p {
